@@ -1,58 +1,66 @@
 # ⭐ Product Review Sentiment & Summary Analyzer
 
-A Generative AI application that analyzes product reviews using a Large Language Model (LLM). The application determines the sentiment of a review, assigns a sentiment score, extracts key points, and generates a concise summary while strictly using only the information provided in the review.
+A **Generative AI** application that analyzes product reviews using a **Large Language Model (LLM)**. The application determines the sentiment of a review, assigns a sentiment score, extracts key points, and generates a concise summary while strictly using only the information provided in the review.
+
+---
+
+## 🚀 Live Demo
+
+**🌐 Streamlit App:**
+https://appuct-review-sentiment-analyzer-dzq7ptl42pxctwa2jyb4nf.streamlit.app/
 
 ---
 
 ## 📌 Problem Statement
 
-Customer reviews contain valuable insights about products, but they are often unstructured and difficult to analyze manually. Businesses need an automated solution to understand customer feedback efficiently.
+Customer reviews provide valuable insights into product quality and customer satisfaction. However, manually analyzing thousands of reviews is time-consuming and inefficient.
 
-This application analyzes product reviews and provides:
+This project automates review analysis by:
 
-- Sentiment Classification
-- Sentiment Score
-- Key Point Extraction
-- Review Summary
+* Detecting review sentiment
+* Assigning a sentiment score
+* Extracting important key points
+* Generating a concise summary
 
-without adding external knowledge or assumptions.
+while ensuring that **no external information or assumptions** are added.
 
 ---
 
 ## 🎯 Objective
 
-Develop a Generative AI application that:
+Develop a Generative AI application that can:
 
-- Classifies review sentiment.
-- Assigns a sentiment score.
-- Extracts important key points.
-- Generates a concise summary.
-- Returns structured output using a Pydantic model.
+* Analyze customer product reviews
+* Classify sentiment as Positive, Negative, Neutral, or Mixed
+* Generate a sentiment score
+* Extract meaningful key points
+* Produce a concise summary
+* Return structured output using a Pydantic schema
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- ✅ Positive, Negative, Neutral & Mixed sentiment detection
-- ✅ Sentiment score generation
-- ✅ Key point extraction
-- ✅ Concise review summarization
-- ✅ Structured output using Pydantic
-- ✅ Streamlit user interface
-- ✅ Prompt Engineering using LangChain
-- ✅ Groq LLM Integration
+* ✅ Positive, Negative, Neutral & Mixed Sentiment Detection
+* ✅ Sentiment Score Generation
+* ✅ Key Point Extraction
+* ✅ Automatic Review Summarization
+* ✅ Structured Output using Pydantic
+* ✅ Prompt Engineering with LangChain
+* ✅ Groq LLM Integration
+* ✅ Interactive Streamlit Web Application
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python
-- Streamlit
-- LangChain
-- Groq LLM
-- Prompt Engineering
-- Pydantic
-- python-dotenv
+* Python
+* Streamlit
+* LangChain
+* Groq LLM
+* Prompt Engineering
+* Pydantic
+* python-dotenv
 
 ---
 
@@ -61,38 +69,38 @@ Develop a Generative AI application that:
 ```
 Product Review Sentiment/
 │
-├── app.py               # Streamlit UI
+├── app.py               # Streamlit User Interface
+├── main.py              # Application Entry Point
 ├── llm.py               # LLM Configuration
 ├── prompt.py            # Prompt Template
 ├── parser.py            # Pydantic Output Schema
-├── main.py              # Testing Script
 ├── requirements.txt
-├── .gitignore
 ├── README.md
+├── .gitignore
 └── .env
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
 ```
-User Review
-      │
-      ▼
-Prompt Template
-      │
-      ▼
-Groq LLM
-      │
-      ▼
-Pydantic Output Parser
-      │
-      ▼
-Structured JSON Output
-      │
-      ▼
-Streamlit Interface
+                 User Review
+                      │
+                      ▼
+            Prompt Template (LangChain)
+                      │
+                      ▼
+                Groq LLM
+                      │
+                      ▼
+        Pydantic Output Parser
+                      │
+                      ▼
+           Structured JSON Output
+                      │
+                      ▼
+             Streamlit Web App
 ```
 
 ---
@@ -121,63 +129,69 @@ The phone looks good but battery drains quickly.
 
 ---
 
-## 🧪 Test Cases
+## 🧪 Sample Test Cases
 
-### Positive Review
+### ✅ Positive Review
 
 ```
 Amazing camera quality and excellent battery life.
 ```
 
-### Negative Review
+---
+
+### ❌ Negative Review
 
 ```
 The battery drains quickly and performance is slow.
 ```
 
-### Mixed Review
+---
+
+### ⚖️ Mixed Review
 
 ```
 The phone looks premium but the battery drains quickly.
 ```
 
-### Neutral Review
+---
+
+### ➖ Neutral Review
 
 ```
-The phone has 128GB storage and a 6.5-inch display.
+The phone has a 128GB storage capacity and a 6.5-inch display.
 ```
 
 ---
 
 ## ⚙️ Installation
 
-Clone the repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/Shivathamme/product-review-sentiment-analyzer.git
 ```
 
-Move into the project folder
+### Navigate to the Project Directory
 
 ```bash
 cd product-review-sentiment-analyzer
 ```
 
-Create a virtual environment
+### Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the virtual environment
+### Activate Virtual Environment
 
-Windows
+**Windows**
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Install dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -187,7 +201,7 @@ pip install -r requirements.txt
 
 ## 🔑 Environment Variables
 
-Create a `.env` file in the project directory.
+Create a `.env` file in the project root.
 
 ```
 groq_class=YOUR_GROQ_API_KEY
@@ -209,12 +223,34 @@ python -m streamlit run app.py
 
 ---
 
+## 📸 Application Screenshots
+
+### Home Page
+
+*Add a screenshot here after deployment.*
+
+```
+images/home.png
+```
+
+### Analysis Result
+
+*Add a screenshot here after testing.*
+
+```
+images/output.png
+```
+
+---
+
 ## 📈 Future Enhancements
 
-- Multi-language review support
-- Aspect-based sentiment analysis
-- Review analytics dashboard
-- Batch review processing
-- Export results to CSV/PDF
-- Product-wise sentiment visualization
+* Multi-language Review Support
+* Aspect-Based Sentiment Analysis
+* Product Comparison Dashboard
+* Batch Review Processing
+* Export Results to CSV/PDF
+* Sentiment Trend Visualization
+* Review Analytics Dashboard
+
 
